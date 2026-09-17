@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wema Bank — Case Study | Sylvia Michelle</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="cs-detail-hero">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#case-studies">← Back to portfolio</a>
+    <span class="badge-sim">Simulated · CSM Practicum (DigitalWinch)</span>
+    <h1>Wema Bank — Corporate Account Management</h1>
+    <p class="subtitle">RICE-Model Prioritisation Under a Dual Crisis</p>
+    <p class="context">Crestfield Agro-Allied Ltd. is a 5-year corporate banking client — ₦28M/year in fees and loan interest, active FX trade finance, payroll for 220 staff. Then two things hit in the same 48-hour window: three payroll runs had failed in four months, with staff complaining directly to the CEO, and Crestfield needed an urgent ₦180M expansion loan — while two competing banks were already in the room.</p>
+    <div class="stat-bar">
+      <div class="stat"><span class="num">₦28M/yr</span><span class="label">annual recurring revenue</span></div>
+      <div class="stat"><span class="num">5 yr</span><span class="label">banking relationship</span></div>
+      <div class="stat"><span class="num">₦180M</span><span class="label">expansion loan requested</span></div>
+      <div class="stat"><span class="num">48 hr</span><span class="label">window before competitors formalised offers</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>RICE model — prioritisation matrix</h2>
+    <p class="lede">Formula: (Reach × Impact × Confidence) ÷ Effort = RICE Score</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Initiative</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE Score</th><th>Decision</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Payroll Escalation — P1</td><td class="num-cell">1</td><td class="num-cell">2</td><td class="num-cell">90%</td><td class="num-cell">0.5 days</td><td class="num-cell">3.6</td><td>Execute Today</td></tr>
+        <tr><td>Export Finance Advisory</td><td class="num-cell">1</td><td class="num-cell">2</td><td class="num-cell">70%</td><td class="num-cell">1.5 wks</td><td class="num-cell">2.8</td><td>Bundle with Loan</td></tr>
+        <tr><td>Agribusiness Forum (reach 12)</td><td class="num-cell">12</td><td class="num-cell">1</td><td class="num-cell">60%</td><td class="num-cell">4 wks</td><td class="num-cell">1.8</td><td>Automate + Defer</td></tr>
+        <tr class="highlight"><td>₦180M Loan Proposal</td><td class="num-cell">1</td><td class="num-cell">3</td><td class="num-cell">80%</td><td class="num-cell">2 wks</td><td class="num-cell">1.2</td><td>Strategic Override ↑</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">The ₦180M loan scores lowest by pure RICE mathematics, due to high underwriting effort. But RICE can't calculate competitive danger — two banks were already in the room. Reading the room, not just the spreadsheet, meant consciously elevating the loan proposal to the #1 strategic priority while executing the payroll fix immediately, in parallel.</div>
+  </div>
+</section>
+
+<section class="cs-section" style="background: var(--warm-white);">
+  <div class="wrap">
+    <h2>Defend &amp; repair — the payroll overhaul</h2>
+    <p class="lede">Stop the bleeding before pitching the loan. A three-layer fix, defined before the client had to ask for one.</p>
+    <div class="layer-list">
+      <div class="layer-item"><span class="layer-tag">Layer 01 · Data</span><div><h4>Pre-validation scrub</h4><p>Payroll CSV files validated 24-48 hours before every disbursement — flagging formatting errors, duplicates, blank salaries, and invalid account numbers before they reach the system.</p></div></div>
+      <div class="layer-item"><span class="layer-tag">Layer 02 · Alert</span><div><h4>Automated escalation</h4><p>Any payroll batch sitting in "Pending" for more than 30 minutes triggers an automated alert cascade and pages the on-call systems engineer — zero discovery lag.</p></div></div>
+      <div class="layer-item"><span class="layer-tag">Layer 03 · Integrity</span><div><h4>Proactive fee rebate</h4><p>A 60-day corporate processing fee rebate applied to the account before it was requested. An operational failure became a demonstration of integrity instead.</p></div></div>
+    </div>
+    <div class="callout">The client doesn't wait to demand compensation — it's given before it's asked for. That's the difference between account management and relationship leadership.</div>
+  </div>
+</section>
+
+<section class="cs-section">
+  <div class="wrap">
+    <h2>Root cause — dual fishbone analysis</h2>
+    <p class="lede">Two independent analyses, triangulated to the same conclusion: a shared, systemic failure — not a one-sided one.</p>
+    <table class="data-table">
+      <thead><tr><th>Crestfield's side</th><th>Bank's side</th></tr></thead>
+      <tbody>
+        <tr><td>Temp-worker data typos in bulk uploads; unformatted Excel files submitted</td><td>API processing timeout on bulk files; no auto-retry mechanism</td></tr>
+        <tr><td>No intermittent processing alerts; 48-hour manual error discovery lag</td><td>Manual file verification required; no automated SLA monitoring</td></tr>
+        <tr><td>Legacy file-parsing engine; no proactive validation layer</td><td>Duplicate account formats; inconsistent employee ID structure</td></tr>
+        <tr><td>Missing real-time API alert system; silent freeze on character typos</td><td>No automated alert trigger; zero notification on silent failures</td></tr>
+      </tbody>
+    </table>
+    <p class="body-text">Both analyses point to the same root cause: the system had no guardrails, and no one was alerted when it failed. The fix had to address both sides at once — not assign blame to either.</p>
+  </div>
+</section>
+
+<section class="cs-footer-nav">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#case-studies" style="color: var(--teal);">← Back to portfolio</a>
+  </div>
+</section>
+
+</body>
+</html>

@@ -70,10 +70,11 @@ nav.topbar .name {
 nav.topbar ul {
   list-style: none;
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 24px;
   margin: 0;
   padding: 0;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 nav.topbar a { text-decoration: none; color: var(--charcoal); }
 nav.topbar a:hover { color: var(--amber); }
@@ -500,7 +501,81 @@ footer {
 .wave-step h4 { margin: 6px 0 4px; font-size: 0.95rem; }
 .wave-step p { margin: 0; font-size: 0.82rem; color: var(--teal); }
 
-.cs-footer-nav {
-  padding: 40px 0 60px;
-  text-align: left;
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.cert-card {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--warm-white);
+}
+.cert-card img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid var(--rule);
+}
+.cert-caption {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.92rem;
+}
+.cert-caption span { font-size: 0.8rem; color: var(--teal); }
+
+.cert-list { list-style: none; margin: 0; padding: 0; }
+.cert-list-compact {
+  max-width: 640px;
+  border-top: 1px solid var(--rule);
+}
+.cert-list li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.95rem;
+}
+.cert-list li span { font-size: 0.82rem; color: var(--teal); }
+
+@media (max-width: 720px) {
+  .cert-grid { grid-template-columns: 1fr; }
+}
+
+/* Custom animated cursor */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  a, button, .cs-card, .btn { cursor: none; }
+}
+.cursor-dot, .cursor-ring {
+  position: fixed;
+  top: 0; left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+.cursor-dot {
+  width: 6px; height: 6px;
+  background: var(--amber);
+}
+.cursor-ring {
+  width: 34px; height: 34px;
+  border: 1.5px solid var(--amber);
+  opacity: 0.7;
+  transition: width 0.18s ease, height 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
+}
+.cursor-ring.is-active {
+  width: 54px; height: 54px;
+  opacity: 1;
+  background: rgba(217, 143, 51, 0.1);
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot, .cursor-ring { display: none; }
 }
